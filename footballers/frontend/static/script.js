@@ -18,8 +18,8 @@ $(document).ready(function(){
 					.append($('<td>').append(fields.club))
 					.click(function(){
 						window.location.href = '/profiles/' + element.pk;
-				    })
-				);
+					})
+					);
 			});
 		}
 	});
@@ -41,5 +41,8 @@ $(document).ready(function(){
 		$('#count')[0].innerHTML = count;
 	});
 
+	$("form").submit(function(e) { // needed as form submit causes reload
+		e.preventDefault();
+	});
 });
 
