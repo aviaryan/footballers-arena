@@ -24,6 +24,7 @@ $(document).ready(function(){
 		}
 	});
 
+	// search handler
 	$("#search_btn").click(function(){
 		var term = $("#search")[0].value.toLowerCase();
 		var count = 0;

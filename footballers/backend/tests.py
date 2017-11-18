@@ -15,16 +15,3 @@ class BackendViewTests(TestCase):
         response = self.client.get(reverse('backend:index'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'API')
-
-
-# class APITests(TestCase):
-#     @staticmethod
-#     def create_footballer(name):
-#         f = Footballer(name=name)
-#         # f.save()
-#         return f
-
-#     def test_api(self):
-#         APITests.create_footballer('Ronaldo')
-#         response = self.client.get(reverse('backend:list_footballers'))
-#         self.assertContains(str(response.content), 'footballers')
