@@ -12,6 +12,11 @@ Player ID {{player_id}}
 	</div>
 
 	<div id="player-data">
+
+		<table class="table table-bordered mt-3">
+		  <tbody>
+		  </tbody>
+		</table>
 	</div>
 </article>
 {% endblock %}
@@ -19,6 +24,13 @@ Player ID {{player_id}}
 {% block script_includes %}
 
 <script type="text/javascript">
+
+
+function fixName(name) {
+	name = name.replace('_', ' ');
+	// https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
+	return name.replace(/\b\S/g, function(t) { return t.toUpperCase() });
+}
 
 $(document).ready(function(){
 
@@ -33,8 +45,15 @@ $(document).ready(function(){
 			$('.image-uri img').attr('src', 'http://via.placeholder.com/250?text=' + (player.name.replace(' ', '+')));
 			// set data
 			$('#player-data')
-				.append($('<h1>').append(player.name))
-				.append($('<p class="club">').append(player.club));
+				.prepend($('<h1>').append(player.name));
+			// create the table
+			var elements = ['club', 'nationality', 'club_joining', 'rating', 'birth_date'];
+			elements.forEach(function(element) {
+				$('tbody').append($('<tr>')
+					.append($('<td>').append(fixName(element)))
+					.append($('<td>').append(player[element]))
+				);
+			});
 		}
 	});
 
