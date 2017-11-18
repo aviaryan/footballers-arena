@@ -10,3 +10,9 @@ body {
 tbody td:hover {
 	cursor: pointer;
 }
+
+/** detail css */
+
+.club {
+	font-style: italic;
+}

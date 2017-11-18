@@ -5,5 +5,43 @@ Player ID {{player_id}}
 {% endblock %}
 
 {% block content %}
-Detail goes here.
+<article>
+
+	<div class="text-center image-uri">
+		<img src="..." class="rounded" alt="...">
+	</div>
+
+	<div id="player-data">
+	</div>
+</article>
+{% endblock %}
+
+{% block script_includes %}
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	// load initial data
+	$.ajax({
+		type: 'GET',
+		url: '/api/players/{{player_id}}',
+		dataType: 'json',
+		success: function (data) {
+			var player = data.fields;
+			// set image
+			$('.image-uri img').attr('src', 'http://via.placeholder.com/250?text=' + (player.name.replace(' ', '+')));
+			// set data
+			$('#player-data')
+				.append($('<h1>').append(player.name))
+				.append($('<p class="club">').append(player.club));
+		}
+	});
+
+});
+
+
+</script>
+
+
 {% endblock %}
