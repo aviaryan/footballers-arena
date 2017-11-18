@@ -13,6 +13,19 @@
 django-admin startproject footballers
 cd footballers/
 python manage.py migrate
-python manage.py createsuperuser  # test test1234
+# ^ create tables, database
+python manage.py createsuperuser  # OPTIONAL test test1234
+# ^ optional
+python load_initial_data.py
+# ^ loads initial data
 python manage.py runserver
+# ^ runs the server
+```
+
+
+## Updating/Working
+
+```sh
+python manage.py makemigrations backend
+python manage.py migrate
 ```

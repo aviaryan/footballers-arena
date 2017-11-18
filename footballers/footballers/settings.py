@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'backend.apps.BackendConfig',  # https://docs.djangoproject.com/en/1.11/intro/tutorial02/
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
