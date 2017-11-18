@@ -10,7 +10,7 @@ def index(request):
     Root handler:
     https://docs.djangoproject.com/en/1.11/intro/tutorial01/
     """
-    return HttpResponse("Hello, world. You're at the backend index.")
+    return HttpResponse("This is the API index.")
 
 
 def list_footballers(request):
