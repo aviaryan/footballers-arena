@@ -16,6 +16,8 @@ Apart from the minimum features mentioned in the requirements, this application 
 3. Player detail shows all stats
 4. Player details shows player's photo. It shows a placeholder where picture is missing.
 5. Custom About page that links to my portfolio.
+6. Custom Favicon added.
+7. Unit tests have been written.
 
 
 ## Running the project
