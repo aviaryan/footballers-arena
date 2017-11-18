@@ -1,10 +1,21 @@
 # Footballers
 
 
-### Requirements
+## Requirements
 
 * Python 3.5
 * `pip install -r requirements.txt`
+
+
+## Features
+
+Apart from the minimum features mentioned in the requirements, this application contains the following extra features.
+
+1. Filter players by name
+2. Player details opens on row click
+3. Player detail shows all stats
+4. Player details shows player's photo. It shows a placeholder where picture is missing.
+5. Custom About page that links to my portfolio.
 
 
 ## Running the project
