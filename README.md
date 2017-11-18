@@ -9,17 +9,27 @@
 
 ## Running the project
 
+
 ```sh
-django-admin startproject footballers
+# clone or download the project and get the terminal to its folder
+
+# install deps
+pip install -r requirements.txt
+
+# switch to the project
 cd footballers/
+
+# create tables, database
 python manage.py migrate
-# ^ create tables, database
+
+# optional
 python manage.py createsuperuser  # OPTIONAL test test1234
-# ^ optional
+
+# loads initial data
 python load_initial_data.py
-# ^ loads initial data
+
+# runs the server
 python manage.py runserver
-# ^ runs the server
 ```
 
 
