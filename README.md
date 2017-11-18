@@ -44,6 +44,8 @@ python manage.py migrate
 ## Running Tests
 
 ```sh
+python manage.py test
+# or
 python manage.py test backend
 python manage.py test frontend
 ```
