@@ -18,7 +18,16 @@ def list_footballers(request):
     Returns footballers list in JSON
     https://docs.djangoproject.com/en/1.11/topics/serialization/
     """
-    data = serializers.serialize("json", Footballer.objects.all())
+    data = serializers.serialize('json', Footballer.objects.all())
     resp = {'footballers': json.loads(data)}
     # not sure about json.loads here
+    return JsonResponse(resp)
+
+
+def get_footballer(request, player_id):
+    """
+    Get single player
+    """
+    data = serializers.serialize('json', [Footballer.objects.get(pk=player_id)])
+    resp = json.loads(data)[0]
     return JsonResponse(resp)
