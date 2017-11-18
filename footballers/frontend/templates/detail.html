@@ -8,7 +8,10 @@ Player ID {{player_id}}
 <article>
 
 	<div class="text-center image-uri">
-		<img src="" class="rounded" alt="...">
+		<!-- fallback to img in case of object fail https://stackoverflow.com/questions/980855/ -->
+		<object data="" type="image/png" class="rounded">
+    		<img src="" class="rounded" />
+  		</object>
 	</div>
 
 	<div id="player-data">
@@ -42,10 +45,12 @@ $(document).ready(function(){
 		success: function (data) {
 			var player = data.fields;
 			// set image
-			$('.image-uri img').attr('src', 'http://via.placeholder.com/250?text=' + (player.name.replace(' ', '+')));
+			$('.image-uri img').attr('src', 'http://via.placeholder.com/128?text=' + (player.name.replace(' ', '+')));
+			// https://stackoverflow.com/questions/20856197/remove-non-ascii-character-in-string
+			$('.image-uri object').attr('data', '/static/player_pics/' + player.name.replace(/[\u{0080}-\u{FFFF}]/gu, '') + '.png');
 			// set data
 			$('#player-data')
-				.prepend($('<h1>').append(player.name));
+				.prepend($('<h1 class="mt-4">').append(player.name));
 			// create the table
 			var elements = [
 				// 'club', 'nationality', 'club_joining', 'rating', 'birth_date', 'age',
