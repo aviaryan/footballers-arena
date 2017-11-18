@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Footballer(models.Model):
-    # worried about its name here
     name = models.CharField(default=None, max_length=25)
     nationality = models.CharField(default=None, max_length=19)
     national_position = models.CharField(default=None, max_length=3)
@@ -56,3 +55,6 @@ class Footballer(models.Model):
     gk_kicking = models.IntegerField(default=None)
     gk_handling = models.IntegerField(default=None)
     gk_reflexes = models.IntegerField(default=None)
+
+    def __str__(self):
+        return self.name
