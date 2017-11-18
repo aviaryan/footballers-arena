@@ -54,7 +54,7 @@ $(document).ready(function(){
 			];
 			elements.forEach(function(element) {
 				$('tbody').append($('<tr>')
-					.append($('<td>').append(fixName(element)))
+					.append($('<th>').append(fixName(element)))
 					.append($('<td>').append(player[element]))
 				);
 			});
