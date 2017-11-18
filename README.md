@@ -32,10 +32,10 @@ pip install -r requirements.txt
 # switch to the project
 cd footballers/
 
-# create tables, database
+# create database with tables
 python manage.py migrate
 
-# optional
+# optional step to create super user
 python manage.py createsuperuser  # OPTIONAL test test1234
 
 # load initial data
