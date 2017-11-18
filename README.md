@@ -25,15 +25,16 @@ python manage.py migrate
 # optional
 python manage.py createsuperuser  # OPTIONAL test test1234
 
-# loads initial data
+# load initial data
 python load_initial_data.py
 
-# runs the server
+# run the server
 python manage.py runserver
+# go to localhost:8000 and enjoy!
 ```
 
 
-## Updating/Working
+## Updating / Saving DB Changes
 
 ```sh
 python manage.py makemigrations backend
