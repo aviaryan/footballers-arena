@@ -13,11 +13,16 @@ $(document).ready(function(){
 				var fields = element.fields;
 				$('tbody').append($('<tr>')
 					.append($('<td>').append(element.pk))
-				    .append($('<td>').append(fields.name))
-				    .append($('<td>').append(fields.nationality))
-				    .append($('<td>').append(fields.club))
+					.append($('<td>').append(fields.name))
+					.append($('<td>').append(fields.nationality))
+					.append($('<td>').append(fields.club))
+					.click(function(){
+						window.location.href = '/profiles/' + element.pk;
+				    })
 				);
 			});
 		}
 	});
+
 });
+
