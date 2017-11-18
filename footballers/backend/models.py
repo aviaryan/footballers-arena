@@ -1,6 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 class Footballers(models.Model):
+    # worried about its name here
     pass
