@@ -13,5 +13,6 @@
 django-admin startproject footballers
 cd footballers/
 python manage.py migrate
+python manage.py createsuperuser  # test test1234
 python manage.py runserver
 ```
