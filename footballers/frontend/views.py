@@ -10,7 +10,7 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'about.html', {})
+    return render(request, 'about.html', {'hide_search': True})
 
 
 def detail(request, player_id):
