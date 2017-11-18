@@ -24,5 +24,22 @@ $(document).ready(function(){
 		}
 	});
 
+	$("#search_btn").click(function(){
+		var term = $("#search")[0].value.toLowerCase();
+		var count = 0;
+		$('tbody tr').each(function(i, row) {
+			var row = $(row);
+			var name = row.find('td')[1].innerHTML;
+			// console.log(name);
+			if (name.toLowerCase().search(term) > -1) {
+				row.show();
+				count += 1;
+			} else {
+				row.hide();
+			}
+		});
+		$('#count')[0].innerHTML = count;
+	});
+
 });
 
