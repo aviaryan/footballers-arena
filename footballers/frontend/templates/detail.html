@@ -47,7 +47,11 @@ $(document).ready(function(){
 			$('#player-data')
 				.prepend($('<h1>').append(player.name));
 			// create the table
-			var elements = ['club', 'nationality', 'club_joining', 'rating', 'birth_date'];
+			var elements = [
+				'club', 'nationality', 'club_joining', 'rating', 'birth_date', 'age',
+				'preffered_foot', 'preffered_position', 'national_position',
+				'club_position'
+			];
 			elements.forEach(function(element) {
 				$('tbody').append($('<tr>')
 					.append($('<td>').append(fixName(element)))
