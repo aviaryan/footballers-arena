@@ -14,4 +14,4 @@ def about(request):
 
 
 def detail(request, player_id):
-    return render(request, 'detail.html', {'player_id': player_id})
+    return render(request, 'detail.html', {'player_id': player_id, 'hide_search': True})
