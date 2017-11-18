@@ -11,3 +11,7 @@ def index(request):
 
 def about(request):
     return render(request, 'about.html', {})
+
+
+def detail(request, player_id):
+    return render(request, 'detail.html', {'player_id': player_id})
