@@ -63,3 +63,16 @@ python manage.py test
 python manage.py test backend
 python manage.py test frontend
 ```
+
+
+-----
+
+## Screenshots
+
+![](https://i.imgur.com/uRqnYof.png)
+
+![](https://i.imgur.com/P134I1j.png)
+
+![](https://i.imgur.com/CtzhD45.png)
+
+
